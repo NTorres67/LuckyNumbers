@@ -79,23 +79,33 @@ namespace LuckyNumbers
 
                 // Randomly generate 6 numbers using a for loop 
 
+                //Random r = new Random();
+                //int[] randomArray = new int[indexes];
+                //for (int z = 0; z < randomArray.Length; z++)
+                //{
+                //    randomArray[z] = r.Next(startNumber, endNumber);
+                //    Console.WriteLine("");
+
+                //    if (randomArray[z] == randomArray[z])
+                //    {
+                //        z = z++;
+                //    }
+                //    else
+                //    {
+                //        z = z - 1;
+
+                //    }
+
+                //    Console.WriteLine("Lucky Number: " + randomArray[z]);
+                //    Console.WriteLine("");
+                //}
+
                 Random r = new Random();
                 int[] randomArray = new int[indexes];
                 for (int z = 0; z < randomArray.Length; z++)
-                {
+                { 
                     randomArray[z] = r.Next(startNumber, endNumber);
                     Console.WriteLine("");
-
-                    if (randomArray[z] == randomArray[z])
-                    {
-                        z = z++;
-                    }
-                    else
-                    {
-                        z = z - 1;
-
-                    }
-
                     Console.WriteLine("Lucky Number: " + randomArray[z]);
                     Console.WriteLine("");
                 }
@@ -113,7 +123,7 @@ namespace LuckyNumbers
                         if (userInput[i] == randomArray[z])
 
                             numbersSame++;
-                        z = z++;
+                        //z = z++; // ISSUE: should have used debugger, code caused j to increment twice skipping an index ... ISSUE 
 
                     }
                 }
